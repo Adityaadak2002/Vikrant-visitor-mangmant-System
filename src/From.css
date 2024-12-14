@@ -1,0 +1,140 @@
+.heding {
+  padding-top: 20px;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Space between words */
+  font-size: 2.5rem; /* Heading size */
+  flex-wrap: wrap; /* Wrap text if the screen is small */
+  
+  /* Adjusted Gradient for text */
+  background: linear-gradient(to left, rgba(0, 0, 255, 0.7),#fc466b);
+  background-size: 200%; /* Expand background size for animation */
+  background-clip: text; /* Clip the gradient to the text */
+  -webkit-background-clip: text; /* For Safari compatibility */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  animation: animate-gradient 5s ease infinite; /* Longer duration for smoother transition */
+  font-weight: bold; /* Bold text */
+  font-family: Arial, sans-serif; /* Readable font */
+}
+
+@keyframes animate-gradient {
+  0% {
+    background-position: 0%; /* Start position of gradient */
+  }
+  50% {
+    background-position: 100%; /* Middle position for smoother transition */
+  }
+  100% {
+    background-position: 0%; /* Return to start position */
+  }
+}
+
+
+
+
+/* Main Container */
+.main-container {
+  margin-top: 100px;
+  display: flex; /* Horizontal alignment of animation and form */
+  align-items: center; /* Center vertically */
+  width: 100vw; /* Full viewport width */
+  height: auto; /* Auto height */
+  box-sizing: border-box; /* Include padding/border in dimensions */
+  padding: 0 10px; /* Optional padding for edge spacing */
+}
+
+/* Animation Container */
+.animation-container {
+  margin-right: 5px; /* Reduce margin to bring closer to the form */
+  width: 40%; /* Reduce the width of the animation container */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.ani {
+  transform: scale(1.2); /* Scale down the animation slightly */
+  transform-origin: center; /* Keep the scaling centered */
+  max-width: none; /* Avoid constraining native resolution */
+  max-height: none; /* Avoid resizing issues */
+  display: block; /* Ensure no inline space issues */
+  width: 100%; /* Maintain aspect ratio within the reduced container */
+  height: auto; /* Keep native resolution intact */
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height for vertical alignment */
+}
+
+/* Form */
+.form {
+  width: 100%; /* Full container width */
+  max-width: 600px; /* Limit max width */
+  background-color: white; /* Optional background */
+  padding: 20px; /* Padding around form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-wrap: wrap; /* Enable horizontal alignment of inputs */
+  gap: 17px; /* Space between form elements */
+  box-sizing: border-box; /* Include padding in dimensions */
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Default: Vertical alignment */
+  flex: 1; /* Each group takes equal width */
+  min-width: 45%; /* Ensure enough space for horizontal layout */
+}
+
+.form-group-btn {
+  width: 100%; /* Submit button spans full width */
+  display: flex;
+  justify-content: center;
+}
+
+/* Input Fields */
+.input-field,
+.textarea-field,
+.select-field {
+  width: 100%; /* Full width of form group */
+  padding: 10px; /* Padding for readability */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Readable text size */
+  box-sizing: border-box; /* Include padding in dimensions */
+}
+
+.input-field:focus,
+.textarea-field:focus,
+.select-field:focus {
+  border-color: #007bff; /* Highlighted border */
+  outline: none; /* Remove default outline */
+}
+
+.textarea-field {
+  resize: none; /* Prevent resizing of textarea */
+}
+
+.submit-btn {
+  padding: 10px 20px; /* Comfortable padding */
+  background-color: blue; /* Button background color */
+  color: #fff; /* Text color */
+  font-size: 18px; /* Large text for button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
